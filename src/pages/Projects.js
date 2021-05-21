@@ -11,8 +11,8 @@ function Projects({ dimensions }) {
     setApplicationPictureCount(0);
   };
 
-  console.log(application);
-  console.log(applicationPictureCount);
+  console.log(application, "<== application");
+  console.log(applicationPictureCount, "<== count");
 
   return (
     <div className="page">
@@ -21,6 +21,7 @@ function Projects({ dimensions }) {
           <div className="list__container">
             {applications?.map((application) => (
               <h1
+                key={application.title}
                 onClick={() => handlePickApplication(application)}
                 className="project__title"
               >
@@ -28,7 +29,12 @@ function Projects({ dimensions }) {
               </h1>
             ))}
           </div>
-          <Project application={application} dimensions={dimensions} />
+          <Project
+            applicationPictureCount={applicationPictureCount}
+            setApplicationPictureCount={setApplicationPictureCount}
+            application={application}
+            dimensions={dimensions}
+          />
         </div>
       </div>
     </div>
