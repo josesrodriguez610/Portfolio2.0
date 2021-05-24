@@ -1,0 +1,40 @@
+.about {
+  padding-top: 10%;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  @include media("<=tablet") {
+    padding-top: 18%;
+  }
+  @include media("<=phone") {
+    padding-top: 30%;
+  }
+  .about-container {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include media("<=phone") {
+      flex-direction: column;
+    }
+    .about-story-container {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .image-container {
+      img {
+        width: 40vw;
+        height: 60vh;
+        object-fit: cover;
+
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+        @include media("<=phone") {
+          width: 100vw;
+          height: 62vh;
+          border-radius: 0;
+        }
+      }
+    }
+  }
+}
