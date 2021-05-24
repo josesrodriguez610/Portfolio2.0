@@ -10,17 +10,18 @@ const About = ({ showNav }) => {
   const [changePicture, setChangePicture] = useState(true);
 
   useEffect(() => {
-    let count = pictureCount;
     let length = stateProfileImages.length;
 
     if (changePicture) {
       const id = setInterval(() => {
-        count++;
-        if (count === length) {
-          setPictureCount((prev) => (prev = 0));
-        } else {
-          setPictureCount((prev) => (prev += 1));
-        }
+        // count++;
+        setPictureCount((prev) => {
+          if (prev === length - 1) {
+            return (prev = 0);
+          } else {
+            return (prev += 1);
+          }
+        });
       }, 2000);
       return () => clearInterval(id);
     }
