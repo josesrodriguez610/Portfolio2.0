@@ -45,3 +45,12 @@ export const applications = [
     ],
   },
 ];
+
+export const profileImages = [
+  { id: "1", img: "1b" },
+  { id: "2", img: "1" },
+  { id: "3", img: "2b" },
+  { id: "4", img: "2" },
+  { id: "5", img: "3b" },
+  { id: "6", img: "3" },
+];

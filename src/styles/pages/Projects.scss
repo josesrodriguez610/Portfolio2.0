@@ -42,22 +42,50 @@
         margin-top: 4%;
       }
 
-      .cases-arrow {
-        background: rgba(0, 0, 0, 0.4);
-        height: 72px;
-        width: 72px;
-        border-radius: 100px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        svg {
-          color: $white;
-          height: 28px;
-          width: 28px;
+      .case-image {
+        img {
+          width: 40vw;
+          height: 60vh;
+          object-fit: cover;
+
+          box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+          @include media("<=phone") {
+            width: 100vw;
+            height: 62vh;
+            border-radius: 0;
+          }
         }
-        &.disabled {
-          opacity: 0.3;
-          pointer-events: none;
+        .arrows {
+          padding: 10px;
+          display: flex;
+          justify-content: space-between;
+          position: relative;
+          top: 290px;
+          @include media("<=desktop") {
+            top: 250px;
+          }
+          @include media("<=tablet") {
+            top: 260px;
+          }
+          .cases-arrow {
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.4);
+            height: 72px;
+            width: 72px;
+            border-radius: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            svg {
+              color: $white;
+              height: 28px;
+              width: 28px;
+            }
+            &.disabled {
+              opacity: 0.3;
+              pointer-events: none;
+            }
+          }
         }
       }
     }

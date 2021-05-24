@@ -8,64 +8,48 @@ const Project = ({
   applicationPictureCount,
   setApplicationPictureCount,
 }) => {
-  const [disabledRight, setDisabledRight] = useState("");
-  const [disabledLeft, setDisabledLeft] = useState("disabled");
-
-  console.log(application, "<= project application");
   const handlePictureRight = () => {
-    let length = application.img.length - 1;
-
+    let length = application.img.length;
     let count = applicationPictureCount;
     count += 1;
-    setDisabledLeft("");
     setApplicationPictureCount(count);
     if (count === length) {
-      setDisabledRight("disabled");
+      setApplicationPictureCount(0);
     }
   };
 
   const handlePictureLeft = () => {
+    let length = application.img.length;
     let count = applicationPictureCount;
-    if (count !== 0) {
-      setDisabledLeft("");
-      count -= 1;
-      setApplicationPictureCount(count);
-    }
-    if (count === 0) {
-      setDisabledLeft("disabled");
-      setDisabledRight("");
+    count -= 1;
+    setApplicationPictureCount(count);
+    if (count === -1) {
+      setApplicationPictureCount(length - 1);
     }
   };
 
   return (
     <div className="project">
-      <h1>{application.title}</h1>
-      <div className="projects__buttons">
+      {/* <h1>{application.title}</h1> */}
+      {/* <div className="projects__buttons">
         <Button title="info?" />
         <Button title="video?" />
-      </div>
+      </div> */}
       <div className="case-image">
-        <div
-          onClick={handlePictureLeft}
-          className={`cases-arrow prev ${disabledLeft}`}
-        >
-          <CasesPrev />
+        <div className="arrows">
+          <div onClick={handlePictureLeft} className="cases-arrow prev">
+            <CasesPrev />
+          </div>
+          <div onClick={handlePictureRight} className="cases-arrow next">
+            <CasesNext />
+          </div>
         </div>
-        <div
-          onClick={handlePictureRight}
-          className={`cases-arrow next ${disabledRight}`}
-        >
-          <CasesNext />
+        <div>
+          <img
+            src={`${application?.img[applicationPictureCount]}.jpg`}
+            alt={application?.title}
+          />
         </div>
-        <img
-          style={{
-            width: "100vw",
-            height: "50vh",
-            objectFit: "cover",
-          }}
-          src={`${application?.img[applicationPictureCount]}.jpg`}
-          alt={application?.title}
-        />
       </div>
     </div>
   );

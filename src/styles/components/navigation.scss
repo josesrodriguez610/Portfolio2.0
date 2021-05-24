@@ -72,6 +72,9 @@ nav {
           padding: 0;
           width: 50%;
           &:nth-child(2) {
+            @include media("<=tablet") {
+              text-align: center;
+            }
             @include media("<=654px") {
               text-align: center;
             }

@@ -4,6 +4,7 @@ import Banner from "../components/Banner";
 import Cases from "../components/Cases";
 import IntroOverlay from "../components/IntroOverlay";
 import { headshots } from "../assets/utils/pictures.js";
+import { profileImages } from "../assets/utils/pictures.js";
 
 let tl = gsap.timeline();
 
@@ -19,6 +20,8 @@ const Home = ({
   const [animationComplete, setAnimationComplete] = useState(false);
   const [colorIndexCount, setColorIndexCount] = useState(0);
   const [stateHeadshots, setStateHeadshots] = useState(headshots);
+  const [stateProfileImages, setStateProfileImages] = useState(profileImages);
+  const [phoneHomePictureCount, setPhoneHomePictureCount] = useState(0);
 
   const homeAnimation = (completeAnimation) => {
     tl.from(".line span", {
@@ -62,7 +65,6 @@ const Home = ({
       });
   };
 
-  console.log(showNav);
   const completeAnimation = () => {
     setAnimationComplete(true);
     setHomeAnimationOnce(true);
@@ -107,6 +109,9 @@ const Home = ({
         setAdjustHomeAtNav={setAdjustHomeAtNav}
       />
       <Cases
+        stateProfileImages={stateProfileImages}
+        phoneHomePictureCount={phoneHomePictureCount}
+        setPhoneHomePictureCount={setPhoneHomePictureCount}
         colorIndexCount={colorIndexCount}
         setColorIndexCount={setColorIndexCount}
         dimensions={dimensions}

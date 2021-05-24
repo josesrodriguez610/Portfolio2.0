@@ -11,9 +11,6 @@ function Projects({ dimensions }) {
     setApplicationPictureCount(0);
   };
 
-  console.log(application, "<== application");
-  console.log(applicationPictureCount, "<== count");
-
   return (
     <div className="page">
       <div className="projects">

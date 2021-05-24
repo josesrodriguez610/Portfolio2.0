@@ -2,13 +2,29 @@ import React, { useState } from "react";
 import { ReactComponent as CasesNext } from "../assets/arrow-right.svg";
 import { ReactComponent as CasesPrev } from "../assets/arrow-left.svg";
 
-const Cases = ({ pictures, dimensions, setPictures }) => {
+const Cases = ({
+  pictures,
+  stateProfileImages,
+  dimensions,
+  setPictures,
+  phoneHomePictureCount,
+  setPhoneHomePictureCount,
+}) => {
   const handleChangePicture = (id) => {
     let arr = [...pictures];
     const obj = arr.find((picture) => picture.id === id);
     let [first, ...rest] = obj.img;
     obj.img = [...rest, first];
     setPictures(arr);
+  };
+
+  const handleChangePictureInPhone = () => {
+    let count = phoneHomePictureCount;
+    count += 1;
+    setPhoneHomePictureCount(count);
+    if (count === stateProfileImages.length) {
+      setPhoneHomePictureCount(0);
+    }
   };
 
   return (
@@ -39,15 +55,21 @@ const Cases = ({ pictures, dimensions, setPictures }) => {
               </div>
             ))
           ) : (
-            <div className="case" key={pictures[0].id}>
-              <div className="case-details">
+            <div
+              className="case"
+              key={stateProfileImages[phoneHomePictureCount].id}
+            >
+              <div
+                className="case-details"
+                onClick={handleChangePictureInPhone}
+              >
                 {/* <span>{caseItem.subtitle}</span>
             <h2>{caseItem.title}</h2> */}
               </div>
               <div className="case-image">
                 <img
-                  src={`${pictures[0].img[0]}.jpg`}
-                  alt={pictures[0].title}
+                  src={`${stateProfileImages[phoneHomePictureCount].img}.jpg`}
+                  alt={stateProfileImages[phoneHomePictureCount].img}
                 />
               </div>
             </div>
