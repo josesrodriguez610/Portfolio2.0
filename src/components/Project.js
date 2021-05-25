@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Button from "./Button";
 import { ReactComponent as CasesNext } from "../assets/arrow-right.svg";
 import { ReactComponent as CasesPrev } from "../assets/arrow-left.svg";
 
@@ -43,6 +42,9 @@ const Project = ({
           <div onClick={handlePictureRight} className="cases-arrow next">
             <CasesNext />
           </div>
+        </div>
+        <div className="project-desc">
+          <span>{application.desc}</span>
         </div>
         <div>
           <img

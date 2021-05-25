@@ -1,15 +1,15 @@
 export const headshots = [
   {
-    id: 1,
-    img: ["1b", "1"],
+    id: 2,
+    img: ["4y", "4b", "4bl"],
   },
   {
-    id: 2,
-    img: ["2", "2b"],
+    id: 1,
+    img: ["1y", "1bl", "1b"],
   },
   {
     id: 3,
-    img: ["3b", "3"],
+    img: ["5y", "5b", "5bl"],
   },
 ];
 
@@ -23,6 +23,7 @@ export const applications = [
       "/websites/portfolio/portfolio3",
       "/websites/portfolio/portfolio4",
     ],
+    desc: "Portfolio showing contact information and projects with ReactJS",
   },
   {
     id: 2,
@@ -33,6 +34,7 @@ export const applications = [
       "/websites/trailerFlix/trailerFlix3",
       "/websites/trailerFlix/trailerFlix4",
     ],
+    desc: "Video streaming style based application where people can watch movie trailers sorted by categories.",
   },
   {
     id: 1,
@@ -43,14 +45,18 @@ export const applications = [
       "/websites/amazon/amazon3",
       "/websites/amazon/amazon4",
     ],
+    desc: "Amazon front-end copy where you can sign in and add items to your basket before checkout.",
   },
 ];
 
 export const profileImages = [
   { id: "1", img: "1b" },
-  { id: "2", img: "1" },
-  { id: "3", img: "2b" },
-  { id: "4", img: "2" },
-  { id: "5", img: "3b" },
-  { id: "6", img: "3" },
+  { id: "2", img: "4y" },
+  { id: "3", img: "5bl" },
+  { id: "4", img: "1y" },
+  { id: "5", img: "5b" },
+  { id: "6", img: "4bl" },
+  { id: "7", img: "1bl" },
+  { id: "8", img: "4b" },
+  { id: "9", img: "5y" },
 ];

@@ -1,6 +1,6 @@
 .projects {
   // background-color: $white;
-  padding-top: 10%;
+  padding-top: 6%;
   display: flex;
   width: 100%;
   justify-content: center;
@@ -61,9 +61,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      // width: 100%;
       .projects__buttons {
-        width: 60%;
         display: flex;
         // align-items: center;
         justify-content: space-around;
@@ -71,11 +69,13 @@
       }
 
       .case-image {
+        @include media("<=phone") {
+          width: 100%;
+        }
         img {
           width: 40vw;
           height: 60vh;
           object-fit: cover;
-
           box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
           @include media("<=phone") {
             width: 100vw;
@@ -125,4 +125,12 @@
   @include media("<=phone") {
     padding-bottom: 1rem;
   }
+}
+
+.project-desc {
+  // width: 100%;
+  max-width: 400px;
+  text-align: center;
+  // padding-top: 100px;
+  // width: 40%;
 }

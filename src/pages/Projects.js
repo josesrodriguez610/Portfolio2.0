@@ -17,9 +17,9 @@ function Projects({ dimensions }) {
         <div className="projects__container">
           <div className="list__container">
             {applications?.map((application) => (
-              <div className="title-container">
+              <div key={application.id} className="title-container">
                 <h1
-                  key={application.title}
+                  key={application.id}
                   onClick={() => handlePickApplication(application)}
                   className="project__title"
                 >
