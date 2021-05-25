@@ -17,13 +17,15 @@ function Projects({ dimensions }) {
         <div className="projects__container">
           <div className="list__container">
             {applications?.map((application) => (
-              <h1
-                key={application.title}
-                onClick={() => handlePickApplication(application)}
-                className="project__title"
-              >
-                {application.title}
-              </h1>
+              <div className="title-container">
+                <h1
+                  key={application.title}
+                  onClick={() => handlePickApplication(application)}
+                  className="project__title"
+                >
+                  {application.title}
+                </h1>
+              </div>
             ))}
           </div>
           <Project

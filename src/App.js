@@ -41,6 +41,7 @@ function App() {
   const [showNav, setShowNav] = useState("none");
   const [adjustHomeAtNav, setAdjustHomeAtNav] = useState(false);
   const [homeAnimationOnce, setHomeAnimationOnce] = useState(false);
+  const [pictureCountInAboutPage, setPictureCountInAboutPage] = useState(0);
 
   gsap.to("body", { css: { visibility: "visible" }, duration: 0 });
 
@@ -80,6 +81,8 @@ function App() {
             <Switch location={location} key={location.pathname}>
               <Route key={path} exact path={path}>
                 <Component
+                  pictureCountInAboutPage={pictureCountInAboutPage}
+                  setPictureCountInAboutPage={setPictureCountInAboutPage}
                   dimensions={dimensions}
                   adjustHomeAtNav={adjustHomeAtNav}
                   setAdjustHomeAtNav={setAdjustHomeAtNav}
