@@ -139,6 +139,7 @@
   justify-content: space-between;
   padding-bottom: 10px;
   @include media("<=phone") {
+    margin-top: -60px;
     width: 98%;
     text-align: center;
   }
