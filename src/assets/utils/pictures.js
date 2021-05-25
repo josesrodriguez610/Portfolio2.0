@@ -24,6 +24,7 @@ export const applications = [
       "/websites/portfolio/portfolio4",
     ],
     desc: "Portfolio showing contact information and projects with ReactJS",
+    link: "https://fir-ad95e.web.app/",
   },
   {
     id: 2,
@@ -35,6 +36,7 @@ export const applications = [
       "/websites/trailerFlix/trailerFlix4",
     ],
     desc: "Video streaming style based application where people can watch movie trailers sorted by categories.",
+    link: "https://netflix-c3662.web.app/",
   },
   {
     id: 1,
@@ -46,6 +48,7 @@ export const applications = [
       "/websites/amazon/amazon4",
     ],
     desc: "Amazon front-end copy where you can sign in and add items to your basket before checkout.",
+    link: "https://fir-ad95e.web.app/",
   },
 ];
 

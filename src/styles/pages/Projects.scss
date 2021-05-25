@@ -1,6 +1,6 @@
 .projects {
   // background-color: $white;
-  padding-top: 6%;
+  padding-top: 5%;
   display: flex;
   width: 100%;
   justify-content: center;
@@ -42,6 +42,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include media("<=1000px") {
+      width: 80%;
+    }
     @include media("<=phone") {
       flex-direction: column;
     }
@@ -69,14 +72,18 @@
       }
 
       .case-image {
-        @include media("<=phone") {
-          width: 100%;
-        }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // width: 100%;
         img {
           width: 40vw;
           height: 60vh;
           object-fit: cover;
           box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+          @include media("<=1000px") {
+            width: 55vw;
+          }
           @include media("<=phone") {
             width: 100vw;
             height: 62vh;
@@ -88,12 +95,12 @@
           display: flex;
           justify-content: space-between;
           position: relative;
-          top: 290px;
+          top: 360px;
           @include media("<=desktop") {
-            top: 250px;
+            top: 320px;
           }
           @include media("<=tablet") {
-            top: 260px;
+            top: 320px;
           }
           .cases-arrow {
             cursor: pointer;
@@ -127,10 +134,18 @@
   }
 }
 
-.project-desc {
-  // width: 100%;
-  max-width: 400px;
-  text-align: center;
-  // padding-top: 100px;
-  // width: 40%;
+.right-container {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  @include media("<=phone") {
+    width: 98%;
+    text-align: center;
+  }
+  .project-desc {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+  }
 }

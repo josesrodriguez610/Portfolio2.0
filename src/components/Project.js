@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ReactComponent as CasesNext } from "../assets/arrow-right.svg";
 import { ReactComponent as CasesPrev } from "../assets/arrow-left.svg";
+import Button from "../components/Button";
 
 const Project = ({
   application,
@@ -43,8 +44,13 @@ const Project = ({
             <CasesNext />
           </div>
         </div>
-        <div className="project-desc">
-          <span>{application.desc}</span>
+        <div className="right-container">
+          <div className="project-desc">
+            <span>{application.desc}</span>
+          </div>
+          <div>
+            <Button title="more" link={application.link} />
+          </div>
         </div>
         <div>
           <img
