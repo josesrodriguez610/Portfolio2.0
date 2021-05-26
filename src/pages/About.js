@@ -9,7 +9,7 @@ const About = ({
   setPictureCountInAboutPage,
 }) => {
   const transitions = TransitionHelper(showNav);
-  const [stateProfileImages, _] = useState(profileImages);
+  const [stateProfileImages] = useState(profileImages);
   const [changePicture, setChangePicture] = useState(true);
 
   useEffect(() => {
@@ -27,7 +27,12 @@ const About = ({
       }, 2000);
       return () => clearInterval(id);
     }
-  }, [pictureCountInAboutPage, changePicture]);
+  }, [
+    pictureCountInAboutPage,
+    changePicture,
+    setPictureCountInAboutPage,
+    stateProfileImages.length,
+  ]);
 
   return (
     <motion.div

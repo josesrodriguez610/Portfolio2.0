@@ -20,7 +20,7 @@ const Home = ({
   const [animationComplete, setAnimationComplete] = useState(false);
   const [colorIndexCount, setColorIndexCount] = useState(0);
   const [stateHeadshots, setStateHeadshots] = useState(headshots);
-  const [stateProfileImages, setStateProfileImages] = useState(profileImages);
+  const [stateProfileImages] = useState(profileImages);
   const [phoneHomePictureCount, setPhoneHomePictureCount] = useState(0);
 
   const homeAnimation = (completeAnimation) => {
@@ -97,6 +97,7 @@ const Home = ({
           },
         });
     }
+    // eslint-disable-next-line
   }, []);
 
   return (

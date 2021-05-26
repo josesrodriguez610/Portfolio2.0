@@ -11,7 +11,7 @@ const Banner = ({ dimensions, adjustHomeAtNav, setShowNav }) => {
     } else if (adjustHomeAtNav === false && dimensions.width <= "425") {
       setAdjustHome("center");
     }
-  }, [adjustHomeAtNav]);
+  }, [dimensions.width, adjustHomeAtNav]);
 
   return (
     <section className="main">

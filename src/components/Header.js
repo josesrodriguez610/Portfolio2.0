@@ -124,7 +124,7 @@ const Header = ({ history, dimensions, setShowNav, setAdjustHomeAtNav }) => {
           },
         });
     }
-  }, [menuState.menuOpened]);
+  }, [menuState.menuOpened, dimensions.height, dimensions.width, history]);
 
   const inClickHandler = () => {
     setMenuState({ menuOpened: true });
