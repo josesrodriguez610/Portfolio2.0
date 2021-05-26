@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { TransitionHelper } from "../assets/utils/routerTransition";
 import { profileImages } from "../assets/utils/pictures";
+import { gsap } from "gsap";
 
 const About = ({
   showNav,
@@ -11,6 +12,8 @@ const About = ({
   const transitions = TransitionHelper(showNav);
   const [stateProfileImages] = useState(profileImages);
   const [changePicture, setChangePicture] = useState(true);
+
+  let tl = gsap.timeline();
 
   useEffect(() => {
     let length = stateProfileImages.length;
@@ -33,6 +36,19 @@ const About = ({
     setPictureCountInAboutPage,
     stateProfileImages.length,
   ]);
+
+  const handlePictureOn = () => {
+    tl.from(".image-container", {
+      duration: 1,
+      scale: 1.5,
+      ease: "expo.inOut",
+      delay: -3,
+      stagger: {
+        amount: 1.4,
+      },
+    });
+    setChangePicture((prev) => !prev);
+  };
 
   return (
     <motion.div
@@ -59,10 +75,7 @@ const About = ({
                 to the implementation and execution of the application.
               </h3>
             </div>
-            <div
-              className="image-container"
-              onClick={() => setChangePicture((prev) => !prev)}
-            >
+            <div className="image-container" onClick={handlePictureOn}>
               <img
                 src={`${stateProfileImages[pictureCountInAboutPage].img}.jpg`}
                 alt={stateProfileImages[pictureCountInAboutPage].img}

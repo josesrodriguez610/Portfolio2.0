@@ -1,4 +1,5 @@
 import React from "react";
+import { gsap } from "gsap";
 
 const Cases = ({
   pictures,
@@ -8,7 +9,19 @@ const Cases = ({
   phoneHomePictureCount,
   setPhoneHomePictureCount,
 }) => {
+  let tl = gsap.timeline();
+
   const handleChangePicture = (id) => {
+    tl.from(`.image-${id}`, {
+      // opacity: 2.5,
+      duration: 1,
+      scale: 1.1,
+      ease: "expo.inOut",
+      delay: -3,
+      stagger: {
+        amount: 1.4,
+      },
+    });
     let arr = [...pictures];
     const obj = arr.find((picture) => picture.id === id);
     let [first, ...rest] = obj.img;
@@ -17,12 +30,23 @@ const Cases = ({
   };
 
   const handleChangePictureInPhone = () => {
+    tl.from(`.phone-${stateProfileImages[phoneHomePictureCount].id}`, {
+      duration: 2,
+      scale: 0.1,
+      ease: "expo.inOut",
+      delay: -3,
+      stagger: {
+        amount: 0.4,
+      },
+    });
     let count = phoneHomePictureCount;
     count += 1;
     setPhoneHomePictureCount(count);
     if (count === stateProfileImages.length) {
       setPhoneHomePictureCount(0);
     }
+
+    console.log(`.phone-${phoneHomePictureCount}`);
   };
 
   return (
@@ -47,7 +71,7 @@ const Cases = ({
                   {/* <span>{caseItem.subtitle}</span>
                   <h2>{caseItem.title}</h2> */}
                 </div>
-                <div className="case-image">
+                <div className={`case-image image-${picture.id}`}>
                   <img src={`${picture?.img[0]}.jpg`} alt={picture.title} />
                 </div>
               </div>
@@ -64,7 +88,9 @@ const Cases = ({
                 {/* <span>{caseItem.subtitle}</span>
             <h2>{caseItem.title}</h2> */}
               </div>
-              <div className="case-image">
+              <div
+                className={`case-image phone-${stateProfileImages[phoneHomePictureCount].id}`}
+              >
                 <img
                   src={`${stateProfileImages[phoneHomePictureCount].img}.jpg`}
                   alt={stateProfileImages[phoneHomePictureCount].img}

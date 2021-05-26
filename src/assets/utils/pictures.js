@@ -1,7 +1,7 @@
 export const headshots = [
   {
     id: 2,
-    img: ["4y", "4b", "4bl"],
+    img: ["6y", "6b", "6bl"],
   },
   {
     id: 1,
@@ -39,7 +39,7 @@ export const applications = [
     link: "https://netflix-c3662.web.app/",
   },
   {
-    id: 1,
+    id: 3,
     title: "Amazon Clone",
     img: [
       "/websites/amazon/amazon1",
@@ -54,12 +54,12 @@ export const applications = [
 
 export const profileImages = [
   { id: "1", img: "1b" },
-  { id: "2", img: "4y" },
+  { id: "2", img: "6y" },
   { id: "3", img: "5bl" },
   { id: "4", img: "1y" },
   { id: "5", img: "5b" },
-  { id: "6", img: "4bl" },
+  { id: "6", img: "6bl" },
   { id: "7", img: "1bl" },
-  { id: "8", img: "4b" },
+  { id: "8", img: "6b" },
   { id: "9", img: "5y" },
 ];

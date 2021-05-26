@@ -15,13 +15,13 @@ const Home = ({
   setHomeAnimationOnce,
   homeAnimationOnce,
   setShowNav,
-  showNav,
+  phoneHomePictureCount,
+  setPhoneHomePictureCount,
 }) => {
   const [animationComplete, setAnimationComplete] = useState(false);
   const [colorIndexCount, setColorIndexCount] = useState(0);
   const [stateHeadshots, setStateHeadshots] = useState(headshots);
   const [stateProfileImages] = useState(profileImages);
-  const [phoneHomePictureCount, setPhoneHomePictureCount] = useState(0);
 
   const homeAnimation = (completeAnimation) => {
     tl.from(".line span", {

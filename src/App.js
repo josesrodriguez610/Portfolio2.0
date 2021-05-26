@@ -42,6 +42,7 @@ function App() {
   const [adjustHomeAtNav, setAdjustHomeAtNav] = useState(false);
   const [homeAnimationOnce, setHomeAnimationOnce] = useState(false);
   const [pictureCountInAboutPage, setPictureCountInAboutPage] = useState(0);
+  const [phoneHomePictureCount, setPhoneHomePictureCount] = useState(0);
 
   gsap.to("body", { css: { visibility: "visible" }, duration: 0 });
 
@@ -81,6 +82,8 @@ function App() {
             <Switch location={location} key={location.pathname}>
               <Route key={path} exact path={path}>
                 <Component
+                  phoneHomePictureCount={phoneHomePictureCount}
+                  setPhoneHomePictureCount={setPhoneHomePictureCount}
                   pictureCountInAboutPage={pictureCountInAboutPage}
                   setPictureCountInAboutPage={setPictureCountInAboutPage}
                   dimensions={dimensions}
