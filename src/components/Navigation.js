@@ -32,6 +32,15 @@ const Navigation = () => {
                   <a
                     target="_blank"
                     rel="noreferrer"
+                    href="/docs/Jose_Rodriguez_Resume.pdf"
+                  >
+                    Resume
+                  </a>
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
                     href="mailto:josesrodriguez610@gmail.com"
                   >
                     josesrodriguez610@gmail.com
