@@ -32,7 +32,7 @@ const Navigation = () => {
                   <a
                     target="_blank"
                     rel="noreferrer"
-                    href="/docs/Jose_Rodriguez_Resume.pdf"
+                    href="/doc/Jose_Rodriguez_resume.pdf"
                   >
                     Resume
                   </a>
