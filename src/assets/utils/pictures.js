@@ -1,15 +1,15 @@
 export const headshots = [
   {
     id: 2,
-    img: ["6y", "6b", "6bl"],
+    img: ["6y", "6bl", "6b"],
   },
   {
     id: 1,
-    img: ["1y", "1bl", "1b"],
+    img: ["1bl", "1b", "1y"],
   },
   {
     id: 3,
-    img: ["5y", "5b", "5bl"],
+    img: ["5y", "5bl", "5b"],
   },
 ];
 
