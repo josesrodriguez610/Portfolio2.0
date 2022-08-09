@@ -16,38 +16,26 @@ export const headshots = [
 export const applications = [
   {
     id: 1,
-    title: "Portfolio 1.0",
-    img: [
-      "/websites/portfolio/portfolio1",
-      "/websites/portfolio/portfolio2",
-      "/websites/portfolio/portfolio3",
-      "/websites/portfolio/portfolio4",
-    ],
-    desc: "Portfolio showing contact information and projects with ReactJS",
+    title: "Retention Curve",
+    img: ["/websites/retention/retention1.png"],
+    desc: "Created an application to keep track of subscriber's rate code timeline",
     link: "https://portfolio-d6258.web.app/",
   },
   {
     id: 2,
-    title: "Trailer Flix",
+    title: "Newsletters Integration",
     img: [
-      "/websites/trailerFlix/trailerFlix1",
-      "/websites/trailerFlix/trailerFlix2",
-      "/websites/trailerFlix/trailerFlix3",
-      "/websites/trailerFlix/trailerFlix4",
+      "/websites/newsletter/newsletter1.png",
+      "/websites/newsletter/newsletter2.png",
     ],
-    desc: "Video streaming style based application where people can watch movie trailers sorted by categories.",
+    desc: "Created modules for our different newsletters",
     link: "https://netflix-c3662.web.app/",
   },
   {
     id: 3,
-    title: "Amazon Clone",
-    img: [
-      "/websites/amazon/amazon1",
-      "/websites/amazon/amazon2",
-      "/websites/amazon/amazon3",
-      "/websites/amazon/amazon4",
-    ],
-    desc: "Amazon front-end copy where you can sign in and add items to your basket before checkout.",
+    title: "Betting Integration",
+    img: ["/websites/betting/betting1.png", "/websites/betting/betting2.png"],
+    desc: "Use Caesars Sportsbook data to create a dynamic Ticker and in-article modules to reflect gameodds",
     link: "https://fir-ad95e.web.app/",
   },
 ];

@@ -48,13 +48,13 @@ const Project = ({
           <div className="project-desc">
             <span>{application.desc}</span>
           </div>
-          <div>
+          {/* <div>
             <Button title="more" link={application.link} />
-          </div>
+          </div> */}
         </div>
-        <div>
+        <div className="image-container">
           <img
-            src={`${application?.img[applicationPictureCount]}.jpg`}
+            src={`${application?.img[applicationPictureCount]}`}
             alt={application?.title}
           />
         </div>
