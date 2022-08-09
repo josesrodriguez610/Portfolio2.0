@@ -18,7 +18,7 @@ export const applications = [
     id: 1,
     title: "Retention Curve",
     img: ["/websites/retention/retention1.png"],
-    desc: "Created an application to keep track of subscriber's rate code timeline",
+    desc: "Created an application to keep track of subscriber's rate code timeline.",
     link: "https://portfolio-d6258.web.app/",
   },
   {
@@ -28,14 +28,14 @@ export const applications = [
       "/websites/newsletter/newsletter1.png",
       "/websites/newsletter/newsletter2.png",
     ],
-    desc: "Created modules for our different newsletters",
+    desc: "Created modules for our different newsletters.",
     link: "https://netflix-c3662.web.app/",
   },
   {
     id: 3,
     title: "Betting Integration",
     img: ["/websites/betting/betting1.png", "/websites/betting/betting2.png"],
-    desc: "Use Caesars Sportsbook data to create a dynamic Ticker and in-article modules to reflect gameodds",
+    desc: "Use Caesars Sportsbook data to create a dynamic Ticker and in-article modules to reflect game odds.",
     link: "https://fir-ad95e.web.app/",
   },
 ];
