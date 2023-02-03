@@ -49,6 +49,22 @@ export const Contact = () => {
                   />
                 </div>
                 <div className="contact__inputLabelContainer">
+                  <a href="https://www.mignonfaget.com/jewelry/pendants/parade-route-pendant-7197/?utm_source=bestofneworleans&utm_medium=post&utm_campaign=mardi_gras_product_slideshow">
+                    Here
+                  </a>
+                  <a
+                    href="https://www.mignonfaget.com/jewelry/pendants/parade-route-pendant-7197/?utm_source=bestofneworleans&utm_medium=post&utm_campaign=mardi_gras_product_slideshow"
+                    target="_blank"
+                  >
+                    Here blank
+                  </a>
+                  <a
+                    href="https://www.mignonfaget.com/jewelry/pendants/parade-route-pendant-7197/?utm_source=bestofneworleans&utm_medium=post&utm_campaign=mardi_gras_product_slideshow"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Here blank with rel
+                  </a>
                   <span className="contact__label">
                     Email address {asterisk}
                   </span>
