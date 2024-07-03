@@ -14,6 +14,7 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Services from "./pages/Services";
 import About from "./pages/About";
+import Music from "./pages/Music";
 
 //routes
 const routes = [
@@ -22,6 +23,7 @@ const routes = [
   { path: "/contact", name: "Contact", Component: Contact },
   { path: "/services", name: "Services", Component: Services },
   { path: "/about", name: "About", Component: About },
+  { path: "/music", name: "Music", Component: Music },
 ];
 
 function debounce(fn, ms) {
