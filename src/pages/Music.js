@@ -25,7 +25,7 @@ export const Music = () => {
               <h2>The Chills - I've said too much</h2>
               <AudioPlayer
                 autoPlay={false}
-                src="I've said too much.mp3" // Make sure the path is correct
+                src="/ive_said_too_much.mp3" // Make sure the path is correct
                 onPlay={(e) => console.log("onPlay")}
                 // Listen to other events if needed
               />
